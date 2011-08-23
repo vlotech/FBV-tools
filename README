@@ -1,0 +1,79 @@
+ine6 FBV interface unit
+The line6 FBV is a very versatile floorboard to control an amplifier (rack) for guitarists.
+
+The downside of the FBV is only that it normally only works for Line6 Products. The FBV uses an own protocol and therefore cannot communicate direct with other equipment.
+
+The FBV interface unit translates the FBV own protocol to MIDI. Also with additional configuration it is also possible to use the LEDs and display for feedback to the guitarist. (showing which units are on, what channel is selected, tuner output).
+
+The devices it can communicate with are:
+
+Any MIDI based amplifier for channel select. (other amps can also be used, but modifications are needed).
+Any MIDI based effect unit
+TC Electronics G-force (bidirectional)
+Fractal Audio Axe-FX (Ultra) (bidirectional) which is the main focus for this unit.
+ 
+
+ 
+
+A demo video is made: YouTube
+
+ All additional information can also be found on github.com/vlotech/FBV-tools.git
+
+The feature supported at this moment:
+
+5 preset buttons + bank up + bank down
+10 CC buttons
+2 Foot controllers with button and led
+For the 10 CC buttons the state of specific blocks within the AxeFX is read out.
+led off = block not loaded
+led on = block loaded and active
+led blinking = block loaded but inactive
+(Semi-) hardcoded CC values + block to button mapping
+USB 2x2 MIDI interface (can be used for programming the AxeFX)
+Additional MIDI connection to USB
+Tuner info in display
+Tap tempo control
+- Tap tempo button doubles with (long hold) tuner control
+Preset name in display
+ 
+
+ 
+
+TODO:
+
+configurable via sysex (is already prepared in the software structure)
+configuration software to be made
+additional MIDI forwarding between MIDI connections (preferable under configuration)
+ 
+
+ 
+
+Optional functions:
+
+larger (extra) display + additional buttons can be added to the CPU board
+specific filtering of MIDI
+additional devices to control with specific commands
+extra analog inputs or outputs for control purposes
+extra relais contact for controlling external amps or FX loops
+patch panels, cabling, specific housing, etc. etc.
+you name it, I'll make it.....
+ 
+
+FAQ:
+
+Can it be used with FBV longboard, FVB short, FBV short MK2, etc. etc. ?
+- My own board is the FBV longboard used with a Vetta amp. The FBV short Mk2 will be tested soon. Any board usable on a Vetta will be supported.
+What kind of casing will be available? / How will it be delivered?
+- option 1) As small as possible. probably plastic black. 
+- option 2) 19" housing (1 HE) with the option to solve other cabling / patching
+- option 3) as a bare PCB where you can install it yourself.
+Can I also integrate it in a floorboard, adding additional buttons / relays / leds etc.? 
+- the PCB had additional pins and digital busses available to add any kind of extra interfaces. It can even be used to create your own controller. (without any Line6 floorboard). Please contact me for the possibilities...
+How is it all powered? 
+- The PCB will need a 9V DC (@ 1A) power supplY (e.g. wall outlet adapter). This will also be used to power the FBV. 
+- The development board does not support phantom power over MIDI, but also doesn't support single MIDI cable connection. The final board will support this. (resulting in a single 7-pin MIDI cable from the AxeFX where the adapter is connected to the AxeFX for phantom power.
+ 
+
+ 
+
+For more info please contact VLoTech.
