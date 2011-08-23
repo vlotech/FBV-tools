@@ -1,0 +1,61 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf460
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20800\viewh16580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 pin 	color		signal\
+1	OrW		GND\
+2	Or		+VDD (+7.5V open)\
+3	GrW		Rx-\
+4	Bl		GND\
+5	BlW		+VDD (+7.5V open)\
+6	Gr		Rx+\
+7	BrW		Tx-\
+8	Br		Tx+\
+\
+Br => BrW = 33kOhm in FBV\
+Br / BrW => OrW = 16.8 kOhm in FBV\
+Gr / GrW => OrW = 16.8 kOhm in AMP\
+\
+OrW => Bl = 0 Ohm\
+Or => BlW = 0 Ohm\
+\
+BrW - Br = ca. 5V in AMP\
+\
+\
+Tx = From Amp to FBV\
+Rx = To Amp From FBV\
+\
+Constant Tx word\
+Length = 1.550 [ms]  = approx 48 bits  => 50 ? = 5 bytes incl start/stop\
+\
+2nd word\
+offset = 29.6 [ms]\
+\
+Pattern repeating on 350 [ms] ==> TAP TEMPO !!!\
+0xE2\
+\
+\
+Smallest "bit" size = 32 [us] => 31.25 Kbit/s ?\
+\
+\
+\
+tap led AAN  		0x90   0xF7 0x3D 0xFD 0x00\
+tab led UIT		0x90   0xF7 0x3D 0xFF 0x00\
+delay led AAN		0x90   0xF7 0x5D 0xFD 0x00\
+delay led UIT		0x90   0xF7 0x5D 0xFF 0x00\
+pitch led AAN		0x90   0xF7 0x9D 0xFD 0x00\
+pitch led UIT		0x90   0xF7 0x9D 0xFF 0x00\
+rev led AAN		0x90   0xF7 0xBD 0xFD 0x00 \
+rev led UIT		0x90   0xF7 0xBD 0xFF 0x00\
+amp2 led AAN		0x90   0xF7 0xDD 0xFD 0x00\
+amp2 led UIT		0x90   0xF7 0xDD 0xFF 0x00\
+amp1 led AAN		0x90   0xF7 0xFD  0xFD 0x00\
+amp1 led UIT		0x90   0xF7 0xFD  0xFF 0x00\
+\
+\
+\
+\
+tab button IN				\
+tab button UIT		}
