@@ -1,0 +1,84 @@
+10
+
+dir
+0
+svn://svnmios.midibox.org/mios32/trunk/apps/usb_midi_2x2_FBX
+svn://svnmios.midibox.org/mios32
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+64d6c282-3004-4abb-abc2-16bea14f3ebd
+
+Makefile
+file
+
+
+
+add
+
+README.txt
+file
+
+
+
+add
+
+app.c
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+app.h
+file
+
+
+
+add
+
+midimon.c
+file
+
+
+
+add
+
+midimon.h
+file
+
+
+
+add
+
+mios32_config.h
+file
+
+
+
+add
+
